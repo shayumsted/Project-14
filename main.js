@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const time = parseFloat(document.getElementById('interest-time').value);
         
         if (!validateInputs([principal, rate, time])) {
-            alert('Please enter valid numbers for all fields.');
+            alert('Please enter valid number for all fields.');
             return; }
 
         const result = calculateInterest(principal, rate, time);
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const numberOfPayments = parseFloat(document.getElementById('loan-payments').value);
         
         if (!validateInputs([principal, rate, numberOfPayments])) {
-            alert('Please enter valid numbers for all fields.');
+            alert('Please enter valid number for all fields.');
             return;}
 
         const result = calculateLoanPayment(principal, rate, numberOfPayments);
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const years = parseFloat(document.getElementById('investment-years').value);
         
         if (!validateInputs([principal, rate, timesCompounded, years])) {
-            alert('Please enter valid numbers for all fields.');
+            alert('Please enter valid number for all fields.');
             return;}
 
         const result = calculateInvestmentReturn(principal, rate, timesCompounded, years);
