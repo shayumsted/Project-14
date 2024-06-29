@@ -34,11 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (!validateInputs([principal, rate, numberOfPayments])) {
             alert('Please enter valid numbers for all fields.');
-            return; }
+            return;}
 
         const result = calculateLoanPayment(principal, rate, numberOfPayments);
-        document.getElementById('loan-result').innerText = `Monthly Payment: ${result}`;
-    });
+        document.getElementById('loan-result').innerText = `Monthly Payment: ${result}`;});
 
     document.getElementById('calculate-investment').addEventListener('click', () => {
         const principal = parseFloat(document.getElementById('investment-principal').value);
