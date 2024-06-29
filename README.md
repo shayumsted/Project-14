@@ -1,1 +1,1 @@
-# Project-14
+Our new project is about creating a easily accesible financial calculator that completes basic functions for simplicity and assistance. The functions include things like loan payment amounts, investment return amounts, or interest rate calculation. The calculator will use E56 functions and models to allow for easy maintenance. 
