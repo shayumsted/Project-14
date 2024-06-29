@@ -1,20 +1,24 @@
 // U78784426
 // main.js
+
 import { calculateInterest } from './modules/interestRate.js';
 import { calculateLoanPayment } from './modules/loanPayment.js';
 import { calculateInvestmentReturn } from './modules/investmentReturn.js';
+
+function validateInputs(inputs) {
+    for (let input of inputs) {
+        if (isNaN(input) || input === '') {
+            return false;
+        }
+    }
+    return true;}
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('calculate-interest').addEventListener('click', () => {
         const principal = parseFloat(document.getElementById('interest-principal').value);
         const rate = parseFloat(document.getElementById('interest-rate').value);
         const time = parseFloat(document.getElementById('interest-time').value);
-
-function validateInputs(inputs) {for (let input of inputs) {
-    if (isNaN(input) || input === '') {
-        return false;}
-}
-return true;}
+        
         if (!validateInputs([principal, rate, time])) {
             alert('Please enter valid numbers for all fields.');
             return; }
@@ -30,7 +34,7 @@ return true;}
         
         if (!validateInputs([principal, rate, numberOfPayments])) {
             alert('Please enter valid numbers for all fields.');
-            return;}
+            return; }
 
         const result = calculateLoanPayment(principal, rate, numberOfPayments);
         document.getElementById('loan-result').innerText = `Monthly Payment: ${result}`;
