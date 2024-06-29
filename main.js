@@ -51,6 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
             return;}
 
         const result = calculateInvestmentReturn(principal, rate, timesCompounded, years);
-        document.getElementById('investment-result').innerText = `Future Value: ${result}`;
-    });
+        document.getElementById('investment-result').innerText = `Future Value: ${result}`;});
 });
