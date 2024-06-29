@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (!validateInputs([principal, rate, timesCompounded, years])) {
             alert('Please enter valid numbers for all fields.');
-            return; }
+            return;}
 
         const result = calculateInvestmentReturn(principal, rate, timesCompounded, years);
         document.getElementById('investment-result').innerText = `Future Value: ${result}`;
